@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TikTok Marketing</title>
+    <link rel="stylesheet" href="contact-styles.css">
+</head>
+<body>
+    <div class="container">
+        <form onsubmit="sendEmail(); reset(); return false;">
+            <h3>GET IN TOUCH</h3>
+            <input type="text" id="name" placeholder="First Name" required>
+            <input type="text" id="email" placeholder="Email" required>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+
+    <!--Details for trial elastic email account -->
+    <script>
+        function sendEmail(){
+            Email.send({
+                    SecurityToken: "cda41dfe-8e0d-4cce-985c-be60eb211fba",
+                    From : "ekwuaziwinner@gmail.com",
+                    ReplyTo: document.getElementById("email").value,
+                    Subject : "Name and Email of Customer - Tik Tok Marketing",
+                    Body : "Name: " + document.getElementById("name").value
+                    + "<br> Email: " + document.getElementById("email").value
+
+                }).then(
+                message => alert(message)
+            );
+        }
+    </script>
+
+</body>
+</html>
+
+
