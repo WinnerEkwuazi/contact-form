@@ -22,7 +22,8 @@
     <script>
         function sendEmail(){
             Email.send({
-                    SecurityToken: "cda41dfe-8e0d-4cce-985c-be60eb211fba",
+                    SecureToken: "cda41dfe-8e0d-4cce-985c-be60eb211fba",
+                    To : 'customercare.uplift@gmail.com',
                     From : "ekwuaziwinner@gmail.com",
                     ReplyTo: document.getElementById("email").value,
                     Subject : "Name and Email of Customer - Tik Tok Marketing",
@@ -34,6 +35,7 @@
             );
         }
     </script>
+
 
 </body>
 </html>
